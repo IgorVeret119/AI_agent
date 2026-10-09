@@ -1,0 +1,182 @@
+[
+  {
+    "id": "q01",
+    "text": "Найди занятия курса agents в текущем учебном расписании.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q02",
+    "text": "Покажи все занятия курса python из снимка schedule-v1.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q03",
+    "text": "Какие пары по databases стоят в расписании?",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q04",
+    "text": "Найди занятия agents, которые проходят в среду.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q05",
+    "text": "Проверь расписание курса python на вторник.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q06",
+    "text": "Выведи все записи текущего расписания без фильтров.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q07",
+    "text": "Нужен поиск пар по курсу agents и дню monday.",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q08",
+    "text": "Есть ли у databases занятия в понедельник?",
+    "gold": "schedule_search",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q09",
+    "text": "Открой занятие с идентификатором agents-mon.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q10",
+    "text": "Получить одну запись расписания: python-tue.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q11",
+    "text": "Покажи подробности занятия databases-wed из schedule-v1.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q12",
+    "text": "Мне нужна конкретная пара agents-wed, её id уже известен.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q13",
+    "text": "Прочитай запись agents-mon без поиска других занятий.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q14",
+    "text": "У меня есть entry_id python-tue. Покажи соответствующее занятие.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q15",
+    "text": "По ключу databases-wed получить занятие текущего расписания.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q16",
+    "text": "Верни подробную запись пары agents-wed по её идентификатору.",
+    "gold": "schedule_get",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q17",
+    "text": "Выведи все учебные пары в понедельник, независимо от курса.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q18",
+    "text": "Какие занятия текущего расписания проходят во вторник? Нужны все курсы.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q19",
+    "text": "Покажи полное расписание учебных занятий на среду.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q20",
+    "text": "Мне нужен список всех пар на monday из schedule-v1.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q21",
+    "text": "Собери все занятия вторника, без фильтра по предмету.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q22",
+    "text": "Что стоит в учебном расписании на wednesday по всем курсам?",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q23",
+    "text": "Список обычных учебных занятий понедельника целиком.",
+    "gold": "schedule_day",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q24",
+    "text": "Какие учебные пары запланированы в аудитории 314?",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q25",
+    "text": "Покажи занятия в кабинете 210 из текущего расписания.",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q26",
+    "text": "Все запланированные занятия аудитории 115.",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q27",
+    "text": "Нужен список пар, проходящих в комнате 314, по всем дням.",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q28",
+    "text": "Что за учебные занятия стоят для аудитории 210 в schedule-v1?",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q29",
+    "text": "Перечисли пары в кабинете 115 без проверки свободных мест.",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  },
+  {
+    "id": "q30",
+    "text": "Для аудитории 314 получи запланированные занятия всех курсов.",
+    "gold": "schedule_room",
+    "rubric": "Choose the most specific applicable tool. A known class entry identifier uses the single-entry getter. All classes in one classroom uses the classroom listing. All classes on one weekday without a course filter uses the weekday listing. A course filter, combined course/day filters, or a general listing uses schedule search. The user refers to the current synthetic course schedule snapshot schedule-v1 unless explicitly stated otherwise."
+  }
+]

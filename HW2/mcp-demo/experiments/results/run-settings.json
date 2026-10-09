@@ -1,0 +1,36 @@
+{
+  "seed": 20261009,
+  "chat_model": "Qwen/Qwen3-0.6B",
+  "embedding_model": "Qwen/Qwen3-Embedding-0.6B",
+  "quantization": "Q8_0",
+  "temperature": 0.7,
+  "top_p": 0.8,
+  "top_k": 20,
+  "min_p": 0,
+  "enable_thinking": false,
+  "selection_max_tokens": 48,
+  "agent_max_tokens": 160,
+  "episode_max_steps": 12,
+  "guard_window": 6,
+  "guard_policy": "stop before third identical or fourth ABAB; lecture implementation unprovided",
+  "bootstrap_draws": 10000,
+  "bootstrap_unit": "query/task clusters, preserving all three repeats",
+  "dataset_hashes": {
+    "tools.json": "1de96e7169e2bfbb599057ba40f734d68e35f6933915342eb390ddf5b5281d39",
+    "queries.json": "c1347e071243a61945e3f6b0449d1a9bee710ad6d24bd596e02c41f3d4026204",
+    "loop_tasks.json": "87c056a4999aada5d36370e6019cd060473a21ec9314fdccfa57e84283565b85"
+  },
+  "source_hashes": {
+    "analyze.py": "06fe50373b705a843e124869ef63976b4daf2971c1f97c5e1a69670d337a771f",
+    "audit_results.py": "887be578fefd8caa91bc29184b95a8deb82a55545180e02ea5c9ce6c85243fef",
+    "build_data.py": "f575467534b35b2d889029867f45be3de26c94d8f6b72388fda302e125167bc3",
+    "core.py": "9d41f11eb7af72c36560a51b41d4264f6cdc9bd40917fa29b15591bec7f9a2ef",
+    "download_models.py": "637f1db319016f949abcf3e6cb93456ca07bb1452cd9a0e392a64bbcfb486885",
+    "local_api.py": "ad8091eff0e200005a593d3edec1baa79f614de236d2313c958de8a110a4d0f1",
+    "run_all.py": "5d5aea85e518c026ee27f20c1959e1edc6baa5932e4325e1a82bc52a2db40048",
+    "run_loops.py": "50b5998cb76108516d957bc084bd08860bfa54295244ab97bb6dcfb0f2e0f433",
+    "run_selection.py": "3ec4c2c1bd5fc47fceb34332d00b7ee1b77103f533d4d901e47b21d8fdcd8f8b",
+    "test_experiments.py": "757fb502b46190fcb85d2e1076a08b3e9cfdafc1900c71130f005fbefa4bf3fa",
+    "unstable_server.py": "fb601ebe038c49241d98afead54392ae0dee6b0093c2cb8650f232db765620ce"
+  }
+}

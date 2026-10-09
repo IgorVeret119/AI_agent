@@ -1,0 +1,16 @@
+{
+  "selection_rows_verified": 720,
+  "episodes_verified": 180,
+  "checks": [
+    "gold_labels",
+    "recomputed_accuracy",
+    "candidate_count",
+    "paired_seeds_and_order",
+    "N5_identical_requests",
+    "token_usage_sum",
+    "fault_masks",
+    "observed_success",
+    "loop_definitions",
+    "guard_prevents_execution"
+  ]
+}

@@ -1,0 +1,1131 @@
+[
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "method": "server/discover",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 1,
+      "result": {
+        "cacheScope": "private",
+        "capabilities": {
+          "prompts": {
+            "listChanged": true
+          },
+          "resources": {
+            "listChanged": true,
+            "subscribe": true
+          },
+          "tools": {
+            "listChanged": true
+          }
+        },
+        "resultType": "complete",
+        "supportedVersions": [
+          "2026-07-28"
+        ],
+        "ttlMs": 0,
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "method": "tools/list",
+      "params": {
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 2,
+      "result": {
+        "cacheScope": "private",
+        "resultType": "complete",
+        "tools": [
+          {
+            "annotations": {
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": false,
+              "readOnlyHint": true
+            },
+            "description": "Search the explicit synthetic schedule snapshot by course and weekday.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "schedule_handle": {
+                  "description": "Explicit immutable schedule snapshot handle.",
+                  "title": "Schedule Handle",
+                  "type": "string",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "course": {
+                  "default": "all",
+                  "description": "Course filter; all selects every course.",
+                  "enum": [
+                    "all",
+                    "agents",
+                    "python",
+                    "databases"
+                  ],
+                  "title": "Course",
+                  "type": "string"
+                },
+                "day": {
+                  "default": "all",
+                  "description": "Weekday filter; all selects every day.",
+                  "enum": [
+                    "all",
+                    "monday",
+                    "tuesday",
+                    "wednesday"
+                  ],
+                  "title": "Day",
+                  "type": "string"
+                },
+                "response_format": {
+                  "default": "concise",
+                  "description": "Amount of detail in the response.",
+                  "enum": [
+                    "concise",
+                    "detailed"
+                  ],
+                  "title": "Response Format",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schedule_handle"
+              ],
+              "title": "schedule_searchArguments",
+              "additionalProperties": false,
+              "description": "Search the explicit synthetic schedule snapshot by course and weekday."
+            },
+            "name": "schedule_search",
+            "outputSchema": {
+              "type": "object",
+              "description": "Synthetic schedule query result.",
+              "additionalProperties": false,
+              "required": [
+                "schedule_handle",
+                "synthetic",
+                "entries"
+              ],
+              "properties": {
+                "schedule_handle": {
+                  "type": "string",
+                  "description": "Immutable snapshot handle.",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "synthetic": {
+                  "type": "boolean",
+                  "enum": [
+                    true
+                  ],
+                  "description": "Data are invented for this exercise."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Fixture provenance.",
+                  "enum": [
+                    "fixture:schedule-v1"
+                  ]
+                },
+                "timezone": {
+                  "type": "string",
+                  "description": "Timezone of the listed class times.",
+                  "enum": [
+                    "Europe/Moscow"
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Disclaimer about the synthetic dataset."
+                },
+                "entries": {
+                  "type": "array",
+                  "description": "Matching classes; empty when no classes match.",
+                  "items": {
+                    "type": "object",
+                    "description": "One class; detailed mode adds course, end and teacher.",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "day",
+                      "start",
+                      "room"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Entry identifier for schedule_get."
+                      },
+                      "course": {
+                        "type": "string",
+                        "description": "Course identifier.",
+                        "enum": [
+                          "agents",
+                          "python",
+                          "databases"
+                        ]
+                      },
+                      "day": {
+                        "type": "string",
+                        "description": "Class weekday.",
+                        "enum": [
+                          "monday",
+                          "tuesday",
+                          "wednesday"
+                        ]
+                      },
+                      "start": {
+                        "type": "string",
+                        "description": "Start time HH:MM in the schedule timezone."
+                      },
+                      "end": {
+                        "type": "string",
+                        "description": "End time HH:MM in the schedule timezone."
+                      },
+                      "room": {
+                        "type": "string",
+                        "description": "Classroom number.",
+                        "enum": [
+                          "314",
+                          "210",
+                          "115"
+                        ]
+                      },
+                      "teacher": {
+                        "type": "string",
+                        "description": "Synthetic teacher name."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "annotations": {
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": false,
+              "readOnlyHint": true
+            },
+            "description": "Get one schedule entry; obtain entry_id using schedule_search.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "schedule_handle": {
+                  "description": "Explicit immutable schedule snapshot handle.",
+                  "title": "Schedule Handle",
+                  "type": "string",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "entry_id": {
+                  "description": "Entry identifier returned by schedule_search.",
+                  "maxLength": 64,
+                  "minLength": 1,
+                  "title": "Entry Id",
+                  "type": "string"
+                },
+                "response_format": {
+                  "default": "concise",
+                  "description": "Amount of detail in the response.",
+                  "enum": [
+                    "concise",
+                    "detailed"
+                  ],
+                  "title": "Response Format",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schedule_handle",
+                "entry_id"
+              ],
+              "title": "schedule_getArguments",
+              "additionalProperties": false,
+              "description": "Get one schedule entry; obtain entry_id using schedule_search."
+            },
+            "name": "schedule_get",
+            "outputSchema": {
+              "type": "object",
+              "description": "Synthetic schedule query result.",
+              "additionalProperties": false,
+              "required": [
+                "schedule_handle",
+                "synthetic",
+                "entries"
+              ],
+              "properties": {
+                "schedule_handle": {
+                  "type": "string",
+                  "description": "Immutable snapshot handle.",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "synthetic": {
+                  "type": "boolean",
+                  "enum": [
+                    true
+                  ],
+                  "description": "Data are invented for this exercise."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Fixture provenance.",
+                  "enum": [
+                    "fixture:schedule-v1"
+                  ]
+                },
+                "timezone": {
+                  "type": "string",
+                  "description": "Timezone of the listed class times.",
+                  "enum": [
+                    "Europe/Moscow"
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Disclaimer about the synthetic dataset."
+                },
+                "entries": {
+                  "type": "array",
+                  "description": "Matching classes; empty when no classes match.",
+                  "items": {
+                    "type": "object",
+                    "description": "One class; detailed mode adds course, end and teacher.",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "day",
+                      "start",
+                      "room"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Entry identifier for schedule_get."
+                      },
+                      "course": {
+                        "type": "string",
+                        "description": "Course identifier.",
+                        "enum": [
+                          "agents",
+                          "python",
+                          "databases"
+                        ]
+                      },
+                      "day": {
+                        "type": "string",
+                        "description": "Class weekday.",
+                        "enum": [
+                          "monday",
+                          "tuesday",
+                          "wednesday"
+                        ]
+                      },
+                      "start": {
+                        "type": "string",
+                        "description": "Start time HH:MM in the schedule timezone."
+                      },
+                      "end": {
+                        "type": "string",
+                        "description": "End time HH:MM in the schedule timezone."
+                      },
+                      "room": {
+                        "type": "string",
+                        "description": "Classroom number.",
+                        "enum": [
+                          "314",
+                          "210",
+                          "115"
+                        ]
+                      },
+                      "teacher": {
+                        "type": "string",
+                        "description": "Synthetic teacher name."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "annotations": {
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": false,
+              "readOnlyHint": true
+            },
+            "description": "List every scheduled class on one supported weekday.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "schedule_handle": {
+                  "description": "Explicit immutable schedule snapshot handle.",
+                  "title": "Schedule Handle",
+                  "type": "string",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "day": {
+                  "description": "Weekday to inspect.",
+                  "enum": [
+                    "monday",
+                    "tuesday",
+                    "wednesday"
+                  ],
+                  "title": "Day",
+                  "type": "string"
+                },
+                "response_format": {
+                  "default": "concise",
+                  "description": "Amount of detail in the response.",
+                  "enum": [
+                    "concise",
+                    "detailed"
+                  ],
+                  "title": "Response Format",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schedule_handle",
+                "day"
+              ],
+              "title": "schedule_dayArguments",
+              "additionalProperties": false,
+              "description": "List every scheduled class on one supported weekday."
+            },
+            "name": "schedule_day",
+            "outputSchema": {
+              "type": "object",
+              "description": "Synthetic schedule query result.",
+              "additionalProperties": false,
+              "required": [
+                "schedule_handle",
+                "synthetic",
+                "entries"
+              ],
+              "properties": {
+                "schedule_handle": {
+                  "type": "string",
+                  "description": "Immutable snapshot handle.",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "synthetic": {
+                  "type": "boolean",
+                  "enum": [
+                    true
+                  ],
+                  "description": "Data are invented for this exercise."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Fixture provenance.",
+                  "enum": [
+                    "fixture:schedule-v1"
+                  ]
+                },
+                "timezone": {
+                  "type": "string",
+                  "description": "Timezone of the listed class times.",
+                  "enum": [
+                    "Europe/Moscow"
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Disclaimer about the synthetic dataset."
+                },
+                "entries": {
+                  "type": "array",
+                  "description": "Matching classes; empty when no classes match.",
+                  "items": {
+                    "type": "object",
+                    "description": "One class; detailed mode adds course, end and teacher.",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "day",
+                      "start",
+                      "room"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Entry identifier for schedule_get."
+                      },
+                      "course": {
+                        "type": "string",
+                        "description": "Course identifier.",
+                        "enum": [
+                          "agents",
+                          "python",
+                          "databases"
+                        ]
+                      },
+                      "day": {
+                        "type": "string",
+                        "description": "Class weekday.",
+                        "enum": [
+                          "monday",
+                          "tuesday",
+                          "wednesday"
+                        ]
+                      },
+                      "start": {
+                        "type": "string",
+                        "description": "Start time HH:MM in the schedule timezone."
+                      },
+                      "end": {
+                        "type": "string",
+                        "description": "End time HH:MM in the schedule timezone."
+                      },
+                      "room": {
+                        "type": "string",
+                        "description": "Classroom number.",
+                        "enum": [
+                          "314",
+                          "210",
+                          "115"
+                        ]
+                      },
+                      "teacher": {
+                        "type": "string",
+                        "description": "Synthetic teacher name."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          },
+          {
+            "annotations": {
+              "destructiveHint": false,
+              "idempotentHint": true,
+              "openWorldHint": false,
+              "readOnlyHint": true
+            },
+            "description": "List classes in one supported classroom.",
+            "inputSchema": {
+              "type": "object",
+              "properties": {
+                "schedule_handle": {
+                  "description": "Explicit immutable schedule snapshot handle.",
+                  "title": "Schedule Handle",
+                  "type": "string",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "room": {
+                  "description": "Supported classroom number.",
+                  "enum": [
+                    "314",
+                    "210",
+                    "115"
+                  ],
+                  "title": "Room",
+                  "type": "string"
+                },
+                "response_format": {
+                  "default": "concise",
+                  "description": "Amount of detail in the response.",
+                  "enum": [
+                    "concise",
+                    "detailed"
+                  ],
+                  "title": "Response Format",
+                  "type": "string"
+                }
+              },
+              "required": [
+                "schedule_handle",
+                "room"
+              ],
+              "title": "schedule_roomArguments",
+              "additionalProperties": false,
+              "description": "List classes in one supported classroom."
+            },
+            "name": "schedule_room",
+            "outputSchema": {
+              "type": "object",
+              "description": "Synthetic schedule query result.",
+              "additionalProperties": false,
+              "required": [
+                "schedule_handle",
+                "synthetic",
+                "entries"
+              ],
+              "properties": {
+                "schedule_handle": {
+                  "type": "string",
+                  "description": "Immutable snapshot handle.",
+                  "enum": [
+                    "schedule-v1"
+                  ]
+                },
+                "synthetic": {
+                  "type": "boolean",
+                  "enum": [
+                    true
+                  ],
+                  "description": "Data are invented for this exercise."
+                },
+                "source": {
+                  "type": "string",
+                  "description": "Fixture provenance.",
+                  "enum": [
+                    "fixture:schedule-v1"
+                  ]
+                },
+                "timezone": {
+                  "type": "string",
+                  "description": "Timezone of the listed class times.",
+                  "enum": [
+                    "Europe/Moscow"
+                  ]
+                },
+                "note": {
+                  "type": "string",
+                  "description": "Disclaimer about the synthetic dataset."
+                },
+                "entries": {
+                  "type": "array",
+                  "description": "Matching classes; empty when no classes match.",
+                  "items": {
+                    "type": "object",
+                    "description": "One class; detailed mode adds course, end and teacher.",
+                    "additionalProperties": false,
+                    "required": [
+                      "id",
+                      "day",
+                      "start",
+                      "room"
+                    ],
+                    "properties": {
+                      "id": {
+                        "type": "string",
+                        "description": "Entry identifier for schedule_get."
+                      },
+                      "course": {
+                        "type": "string",
+                        "description": "Course identifier.",
+                        "enum": [
+                          "agents",
+                          "python",
+                          "databases"
+                        ]
+                      },
+                      "day": {
+                        "type": "string",
+                        "description": "Class weekday.",
+                        "enum": [
+                          "monday",
+                          "tuesday",
+                          "wednesday"
+                        ]
+                      },
+                      "start": {
+                        "type": "string",
+                        "description": "Start time HH:MM in the schedule timezone."
+                      },
+                      "end": {
+                        "type": "string",
+                        "description": "End time HH:MM in the schedule timezone."
+                      },
+                      "room": {
+                        "type": "string",
+                        "description": "Classroom number.",
+                        "enum": [
+                          "314",
+                          "210",
+                          "115"
+                        ]
+                      },
+                      "teacher": {
+                        "type": "string",
+                        "description": "Synthetic teacher name."
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        ],
+        "ttlMs": 0,
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_search",
+        "arguments": {
+          "schedule_handle": "schedule-v1",
+          "course": "agents"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 3,
+      "result": {
+        "content": [
+          {
+            "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"day\":\"monday\",\"start\":\"10:00\",\"room\":\"314\"},{\"id\":\"agents-wed\",\"day\":\"wednesday\",\"start\":\"10:00\",\"room\":\"314\"}]}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "schedule_handle": "schedule-v1",
+          "synthetic": true,
+          "entries": [
+            {
+              "id": "agents-mon",
+              "day": "monday",
+              "start": "10:00",
+              "room": "314"
+            },
+            {
+              "id": "agents-wed",
+              "day": "wednesday",
+              "start": "10:00",
+              "room": "314"
+            }
+          ]
+        },
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_search",
+        "arguments": {
+          "schedule_handle": "invalid",
+          "course": "agents"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 4,
+      "result": {
+        "content": [
+          {
+            "text": "{\"code\":\"invalid_arguments\",\"message\":\"Invalid fields: schedule_handle\",\"hint\":\"Use tools/list: supply required fields, enum values and correct types; remove extra fields.\"}",
+            "type": "text"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_get",
+        "arguments": {
+          "schedule_handle": "schedule-v1",
+          "entry_id": "agents-mon"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 5,
+      "result": {
+        "content": [
+          {
+            "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"day\":\"monday\",\"start\":\"10:00\",\"room\":\"314\"}]}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "schedule_handle": "schedule-v1",
+          "synthetic": true,
+          "entries": [
+            {
+              "id": "agents-mon",
+              "day": "monday",
+              "start": "10:00",
+              "room": "314"
+            }
+          ]
+        },
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 6,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_get",
+        "arguments": {
+          "schedule_handle": "invalid",
+          "entry_id": "agents-mon"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 6,
+      "result": {
+        "content": [
+          {
+            "text": "{\"code\":\"invalid_arguments\",\"message\":\"Invalid fields: schedule_handle\",\"hint\":\"Use tools/list: supply required fields, enum values and correct types; remove extra fields.\"}",
+            "type": "text"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_day",
+        "arguments": {
+          "schedule_handle": "schedule-v1",
+          "day": "wednesday"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 7,
+      "result": {
+        "content": [
+          {
+            "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"databases-wed\",\"day\":\"wednesday\",\"start\":\"14:00\",\"room\":\"115\"},{\"id\":\"agents-wed\",\"day\":\"wednesday\",\"start\":\"10:00\",\"room\":\"314\"}]}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "schedule_handle": "schedule-v1",
+          "synthetic": true,
+          "entries": [
+            {
+              "id": "databases-wed",
+              "day": "wednesday",
+              "start": "14:00",
+              "room": "115"
+            },
+            {
+              "id": "agents-wed",
+              "day": "wednesday",
+              "start": "10:00",
+              "room": "314"
+            }
+          ]
+        },
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 8,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_day",
+        "arguments": {
+          "schedule_handle": "invalid",
+          "day": "wednesday"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 8,
+      "result": {
+        "content": [
+          {
+            "text": "{\"code\":\"invalid_arguments\",\"message\":\"Invalid fields: schedule_handle\",\"hint\":\"Use tools/list: supply required fields, enum values and correct types; remove extra fields.\"}",
+            "type": "text"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 9,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_room",
+        "arguments": {
+          "schedule_handle": "schedule-v1",
+          "room": "314"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 9,
+      "result": {
+        "content": [
+          {
+            "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"day\":\"monday\",\"start\":\"10:00\",\"room\":\"314\"},{\"id\":\"agents-wed\",\"day\":\"wednesday\",\"start\":\"10:00\",\"room\":\"314\"}]}",
+            "type": "text"
+          }
+        ],
+        "isError": false,
+        "resultType": "complete",
+        "structuredContent": {
+          "schedule_handle": "schedule-v1",
+          "synthetic": true,
+          "entries": [
+            {
+              "id": "agents-mon",
+              "day": "monday",
+              "start": "10:00",
+              "room": "314"
+            },
+            {
+              "id": "agents-wed",
+              "day": "wednesday",
+              "start": "10:00",
+              "room": "314"
+            }
+          ]
+        },
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  },
+  {
+    "request": {
+      "jsonrpc": "2.0",
+      "id": 10,
+      "method": "tools/call",
+      "params": {
+        "name": "schedule_room",
+        "arguments": {
+          "schedule_handle": "invalid",
+          "room": "314"
+        },
+        "_meta": {
+          "io.modelcontextprotocol/protocolVersion": "2026-07-28",
+          "io.modelcontextprotocol/clientInfo": {
+            "name": "schedule-demo",
+            "version": "1.0.0"
+          },
+          "io.modelcontextprotocol/clientCapabilities": {}
+        }
+      }
+    }
+  },
+  {
+    "response": {
+      "jsonrpc": "2.0",
+      "id": 10,
+      "result": {
+        "content": [
+          {
+            "text": "{\"code\":\"invalid_arguments\",\"message\":\"Invalid fields: schedule_handle\",\"hint\":\"Use tools/list: supply required fields, enum values and correct types; remove extra fields.\"}",
+            "type": "text"
+          }
+        ],
+        "isError": true,
+        "resultType": "complete",
+        "_meta": {
+          "io.modelcontextprotocol/serverInfo": {
+            "name": "Course schedule",
+            "version": "1.0.0"
+          }
+        }
+      }
+    }
+  }
+]

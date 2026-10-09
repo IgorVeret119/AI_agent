@@ -1,0 +1,1562 @@
+[
+  {
+    "n": 5,
+    "query_id": "q01",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q02",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q03",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q04",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q05",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q06",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q07",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_search",
+      "schedule_day",
+      "exam_get",
+      "schedule_get",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q08",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q09",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_get",
+      "schedule_room",
+      "schedule_search",
+      "schedule_get",
+      "schedule_day"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q10",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_room",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q11",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_room",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q12",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_get",
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q13",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_get",
+      "schedule_search",
+      "schedule_room",
+      "schedule_day",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q14",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_get",
+      "schedule_get",
+      "schedule_room",
+      "schedule_search",
+      "schedule_day"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q15",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "exam_get",
+      "schedule_search",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q16",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_get",
+      "schedule_room",
+      "schedule_search",
+      "schedule_day",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q17",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q18",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q19",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q20",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "schedule_get",
+      "exam_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q21",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q22",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q23",
+    "gold": "schedule_day",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q24",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q25",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "exam_get",
+      "schedule_search",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q26",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q27",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_day",
+      "schedule_room",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q28",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_day",
+      "schedule_search",
+      "schedule_room",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q29",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_room",
+      "exam_get",
+      "schedule_day",
+      "schedule_search",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 5,
+    "query_id": "q30",
+    "gold": "schedule_room",
+    "top5": [
+      "schedule_room",
+      "schedule_day",
+      "schedule_search",
+      "exam_get",
+      "schedule_get"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q01",
+    "gold": "schedule_search",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_room",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q02",
+    "gold": "schedule_search",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "schedule_day",
+      "teacher_schedule_search",
+      "schedule_search"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q03",
+    "gold": "schedule_search",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q04",
+    "gold": "schedule_search",
+    "top5": [
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "exam_search",
+      "schedule_day",
+      "room_details"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q05",
+    "gold": "schedule_search",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_day",
+      "schedule_search"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q06",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_notifications",
+      "exam_search",
+      "schedule_day",
+      "teacher_schedule_search",
+      "schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q07",
+    "gold": "schedule_search",
+    "top5": [
+      "teacher_schedule_search",
+      "exam_search",
+      "schedule_notifications",
+      "schedule_search",
+      "room_details"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q08",
+    "gold": "schedule_search",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "room_details",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q09",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_notifications",
+      "room_details",
+      "teacher_schedule_search",
+      "exam_search",
+      "exam_get"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q10",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_notifications",
+      "exam_search",
+      "teacher_schedule_search",
+      "room_details",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q11",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_day",
+      "schedule_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q12",
+    "gold": "schedule_get",
+    "top5": [
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "exam_search",
+      "weather_inspect"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q13",
+    "gold": "schedule_get",
+    "top5": [
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "room_details",
+      "exam_search",
+      "exam_get"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q14",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_search",
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "exam_get"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q15",
+    "gold": "schedule_get",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "room_details",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q16",
+    "gold": "schedule_get",
+    "top5": [
+      "room_details",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "exam_search",
+      "exam_get"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q17",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_room",
+      "schedule_day"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q18",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "schedule_day",
+      "teacher_schedule_search",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q19",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_day",
+      "room_details"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q20",
+    "gold": "schedule_day",
+    "top5": [
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "schedule_day",
+      "exam_search",
+      "schedule_search"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q21",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "schedule_day",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q22",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_day",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q23",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "schedule_day",
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q24",
+    "gold": "schedule_room",
+    "top5": [
+      "room_details",
+      "exam_search",
+      "schedule_notifications",
+      "schedule_room",
+      "teacher_schedule_search"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q25",
+    "gold": "schedule_room",
+    "top5": [
+      "exam_search",
+      "room_details",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q26",
+    "gold": "schedule_room",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q27",
+    "gold": "schedule_room",
+    "top5": [
+      "room_details",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "exam_search",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q28",
+    "gold": "schedule_room",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 20,
+    "query_id": "q29",
+    "gold": "schedule_room",
+    "top5": [
+      "room_details",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "exam_search",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 20,
+    "query_id": "q30",
+    "gold": "schedule_room",
+    "top5": [
+      "exam_search",
+      "schedule_notifications",
+      "teacher_schedule_search",
+      "room_details",
+      "schedule_room"
+    ],
+    "hit": true
+  },
+  {
+    "n": 50,
+    "query_id": "q01",
+    "gold": "schedule_search",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q02",
+    "gold": "schedule_search",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q03",
+    "gold": "schedule_search",
+    "top5": [
+      "schedule_conflicts",
+      "archive_schedule_room",
+      "room_availability",
+      "exam_search",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q04",
+    "gold": "schedule_search",
+    "top5": [
+      "room_availability",
+      "schedule_conflicts",
+      "calendar_search",
+      "teacher_schedule_search",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q05",
+    "gold": "schedule_search",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "schedule_conflicts",
+      "archive_schedule_day",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q06",
+    "gold": "schedule_search",
+    "top5": [
+      "calendar_search",
+      "archive_schedule_room",
+      "schedule_notifications",
+      "schedule_conflicts",
+      "room_availability"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q07",
+    "gold": "schedule_search",
+    "top5": [
+      "calendar_search",
+      "teacher_schedule_search",
+      "schedule_conflicts",
+      "room_availability",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q08",
+    "gold": "schedule_search",
+    "top5": [
+      "room_availability",
+      "archive_schedule_room",
+      "exam_search",
+      "schedule_conflicts",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q09",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_notifications",
+      "room_availability",
+      "archive_schedule_room",
+      "consultation_get",
+      "schedule_conflicts"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q10",
+    "gold": "schedule_get",
+    "top5": [
+      "calendar_search",
+      "schedule_conflicts",
+      "room_availability",
+      "schedule_notifications",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q11",
+    "gold": "schedule_get",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "calendar_search",
+      "schedule_conflicts",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q12",
+    "gold": "schedule_get",
+    "top5": [
+      "schedule_conflicts",
+      "support_inspect",
+      "room_details",
+      "teacher_schedule_search",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q13",
+    "gold": "schedule_get",
+    "top5": [
+      "calendar_search",
+      "schedule_conflicts",
+      "teacher_schedule_search",
+      "archive_schedule_room",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q14",
+    "gold": "schedule_get",
+    "top5": [
+      "archive_schedule_room",
+      "exam_search",
+      "room_availability",
+      "schedule_conflicts",
+      "room_details"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q15",
+    "gold": "schedule_get",
+    "top5": [
+      "archive_schedule_room",
+      "room_availability",
+      "exam_search",
+      "schedule_notifications",
+      "schedule_conflicts"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q16",
+    "gold": "schedule_get",
+    "top5": [
+      "support_inspect",
+      "room_details",
+      "consultation_get",
+      "archive_schedule_room",
+      "support_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q17",
+    "gold": "schedule_day",
+    "top5": [
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "exam_search",
+      "room_availability",
+      "schedule_conflicts"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q18",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "room_availability",
+      "archive_schedule_day",
+      "archive_schedule_room",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q19",
+    "gold": "schedule_day",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "schedule_conflicts",
+      "archive_schedule_room",
+      "archive_schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q20",
+    "gold": "schedule_day",
+    "top5": [
+      "calendar_search",
+      "teacher_schedule_search",
+      "schedule_notifications",
+      "schedule_conflicts",
+      "schedule_day"
+    ],
+    "hit": true
+  },
+  {
+    "n": 50,
+    "query_id": "q21",
+    "gold": "schedule_day",
+    "top5": [
+      "archive_schedule_room",
+      "calendar_search",
+      "exam_search",
+      "room_availability",
+      "archive_schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q22",
+    "gold": "schedule_day",
+    "top5": [
+      "exam_search",
+      "archive_schedule_day",
+      "archive_schedule_room",
+      "room_availability",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q23",
+    "gold": "schedule_day",
+    "top5": [
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "exam_search",
+      "room_availability",
+      "schedule_day"
+    ],
+    "hit": true
+  },
+  {
+    "n": 50,
+    "query_id": "q24",
+    "gold": "schedule_room",
+    "top5": [
+      "archive_schedule_room",
+      "room_availability",
+      "room_details",
+      "schedule_conflicts",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q25",
+    "gold": "schedule_room",
+    "top5": [
+      "room_availability",
+      "archive_schedule_room",
+      "exam_search",
+      "room_details",
+      "schedule_conflicts"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q26",
+    "gold": "schedule_room",
+    "top5": [
+      "room_availability",
+      "archive_schedule_room",
+      "exam_search",
+      "schedule_conflicts",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q27",
+    "gold": "schedule_room",
+    "top5": [
+      "room_details",
+      "schedule_conflicts",
+      "calendar_search",
+      "archive_schedule_room",
+      "room_availability"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q28",
+    "gold": "schedule_room",
+    "top5": [
+      "room_availability",
+      "exam_search",
+      "archive_schedule_room",
+      "schedule_conflicts",
+      "archive_schedule_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q29",
+    "gold": "schedule_room",
+    "top5": [
+      "room_details",
+      "schedule_conflicts",
+      "archive_schedule_room",
+      "room_availability",
+      "calendar_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 50,
+    "query_id": "q30",
+    "gold": "schedule_room",
+    "top5": [
+      "exam_search",
+      "room_availability",
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "schedule_notifications"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q01",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_search",
+      "archive_schedule_search",
+      "room_availability",
+      "exam_search",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q02",
+    "gold": "schedule_search",
+    "top5": [
+      "archive_schedule_search",
+      "consultation_search",
+      "calendar_day",
+      "room_availability",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q03",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_day",
+      "schedule_conflicts",
+      "consultation_room",
+      "archive_schedule_room",
+      "exam_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q04",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_day",
+      "calendar_day",
+      "room_availability",
+      "consultation_room",
+      "consultation_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q05",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_search",
+      "room_availability",
+      "exam_search",
+      "archive_schedule_search",
+      "schedule_conflicts"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q06",
+    "gold": "schedule_search",
+    "top5": [
+      "calendar_day",
+      "calendar_search",
+      "archive_schedule_search",
+      "consultation_room",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q07",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_day",
+      "calendar_search",
+      "teacher_schedule_search",
+      "schedule_conflicts",
+      "consultation_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q08",
+    "gold": "schedule_search",
+    "top5": [
+      "consultation_search",
+      "room_availability",
+      "archive_schedule_room",
+      "exam_search",
+      "consultation_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q09",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_day",
+      "consultation_room",
+      "schedule_notifications",
+      "room_availability",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q10",
+    "gold": "schedule_get",
+    "top5": [
+      "calendar_day",
+      "calendar_search",
+      "consultation_search",
+      "consultation_day",
+      "archive_schedule_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q11",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_search",
+      "calendar_day",
+      "room_availability",
+      "archive_schedule_search",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q12",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_day",
+      "consultation_room",
+      "schedule_conflicts",
+      "support_inspect",
+      "room_details"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q13",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_day",
+      "calendar_search",
+      "consultation_room",
+      "schedule_conflicts",
+      "calendar_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q14",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_search",
+      "archive_schedule_room",
+      "consultation_day",
+      "exam_search",
+      "archive_schedule_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q15",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_search",
+      "archive_schedule_room",
+      "consultation_day",
+      "archive_schedule_search",
+      "room_availability"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q16",
+    "gold": "schedule_get",
+    "top5": [
+      "consultation_day",
+      "support_inspect",
+      "room_details",
+      "consultation_room",
+      "consultation_get"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q17",
+    "gold": "schedule_day",
+    "top5": [
+      "consultation_search",
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "archive_schedule_search",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q18",
+    "gold": "schedule_day",
+    "top5": [
+      "consultation_search",
+      "calendar_day",
+      "archive_schedule_search",
+      "exam_search",
+      "room_availability"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q19",
+    "gold": "schedule_day",
+    "top5": [
+      "consultation_search",
+      "room_availability",
+      "exam_search",
+      "calendar_day",
+      "archive_schedule_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q20",
+    "gold": "schedule_day",
+    "top5": [
+      "calendar_day",
+      "calendar_search",
+      "consultation_day",
+      "consultation_room",
+      "archive_schedule_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q21",
+    "gold": "schedule_day",
+    "top5": [
+      "calendar_day",
+      "consultation_search",
+      "archive_schedule_room",
+      "calendar_search",
+      "exam_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q22",
+    "gold": "schedule_day",
+    "top5": [
+      "consultation_search",
+      "exam_search",
+      "archive_schedule_search",
+      "archive_schedule_day",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q23",
+    "gold": "schedule_day",
+    "top5": [
+      "calendar_day",
+      "consultation_search",
+      "archive_schedule_room",
+      "archive_schedule_day",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q24",
+    "gold": "schedule_room",
+    "top5": [
+      "archive_schedule_room",
+      "room_availability",
+      "room_details",
+      "consultation_search",
+      "consultation_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q25",
+    "gold": "schedule_room",
+    "top5": [
+      "consultation_room",
+      "consultation_search",
+      "room_availability",
+      "archive_schedule_room",
+      "consultation_day"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q26",
+    "gold": "schedule_room",
+    "top5": [
+      "room_availability",
+      "consultation_search",
+      "consultation_room",
+      "archive_schedule_room",
+      "exam_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q27",
+    "gold": "schedule_room",
+    "top5": [
+      "consultation_room",
+      "room_details",
+      "schedule_conflicts",
+      "calendar_day",
+      "calendar_search"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q28",
+    "gold": "schedule_room",
+    "top5": [
+      "consultation_search",
+      "room_availability",
+      "exam_search",
+      "archive_schedule_search",
+      "consultation_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q29",
+    "gold": "schedule_room",
+    "top5": [
+      "consultation_room",
+      "room_details",
+      "schedule_conflicts",
+      "consultation_day",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  },
+  {
+    "n": 100,
+    "query_id": "q30",
+    "gold": "schedule_room",
+    "top5": [
+      "consultation_search",
+      "archive_schedule_search",
+      "exam_search",
+      "room_availability",
+      "archive_schedule_room"
+    ],
+    "hit": false
+  }
+]

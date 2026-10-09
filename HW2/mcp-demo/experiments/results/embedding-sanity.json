@@ -1,0 +1,7 @@
+{
+  "dimension": 1024,
+  "same_description_cosine": 0.9999999999999999,
+  "unrelated_weather_cosine": 0.5364880410546573,
+  "unique_cached_tool_vectors": 100,
+  "passed": true
+}

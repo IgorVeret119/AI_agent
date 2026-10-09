@@ -1,0 +1,57 @@
+{
+  "encoding": "cl100k_base",
+  "serialization": "UTF-8 JSON, ensure_ascii=False, compact separators",
+  "examples": [
+    {
+      "tool": "schedule_search",
+      "arguments": {
+        "schedule_handle": "schedule-v1",
+        "course": "agents"
+      },
+      "concise": {
+        "text_tokens": 57,
+        "result_tokens": 167,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"day\":\"monday\",\"start\":\"10:00\",\"room\":\"314\"},{\"id\":\"agents-wed\",\"day\":\"wednesday\",\"start\":\"10:00\",\"room\":\"314\"}]}"
+      },
+      "detailed": {
+        "text_tokens": 118,
+        "result_tokens": 288,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"course\":\"agents\",\"day\":\"monday\",\"start\":\"10:00\",\"end\":\"11:30\",\"room\":\"314\",\"teacher\":\"Anna Petrova\"},{\"id\":\"agents-wed\",\"course\":\"agents\",\"day\":\"wednesday\",\"start\":\"10:00\",\"end\":\"11:30\",\"room\":\"314\",\"teacher\":\"Anna Petrova\"}],\"source\":\"fixture:schedule-v1\",\"timezone\":\"Europe/Moscow\",\"note\":\"Invented teaching data; not an actual course timetable.\"}"
+      }
+    },
+    {
+      "tool": "schedule_get",
+      "arguments": {
+        "schedule_handle": "schedule-v1",
+        "entry_id": "agents-mon"
+      },
+      "concise": {
+        "text_tokens": 36,
+        "result_tokens": 123,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"day\":\"monday\",\"start\":\"10:00\",\"room\":\"314\"}]}"
+      },
+      "detailed": {
+        "text_tokens": 81,
+        "result_tokens": 212,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"agents-mon\",\"course\":\"agents\",\"day\":\"monday\",\"start\":\"10:00\",\"end\":\"11:30\",\"room\":\"314\",\"teacher\":\"Anna Petrova\"}],\"source\":\"fixture:schedule-v1\",\"timezone\":\"Europe/Moscow\",\"note\":\"Invented teaching data; not an actual course timetable.\"}"
+      }
+    },
+    {
+      "tool": "schedule_day",
+      "arguments": {
+        "schedule_handle": "schedule-v1",
+        "day": "wednesday"
+      },
+      "concise": {
+        "text_tokens": 59,
+        "result_tokens": 171,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"databases-wed\",\"day\":\"wednesday\",\"start\":\"14:00\",\"room\":\"115\"},{\"id\":\"agents-wed\",\"day\":\"wednesday\",\"start\":\"10:00\",\"room\":\"314\"}]}"
+      },
+      "detailed": {
+        "text_tokens": 121,
+        "result_tokens": 294,
+        "text": "{\"schedule_handle\":\"schedule-v1\",\"synthetic\":true,\"entries\":[{\"id\":\"databases-wed\",\"course\":\"databases\",\"day\":\"wednesday\",\"start\":\"14:00\",\"end\":\"15:30\",\"room\":\"115\",\"teacher\":\"Maria Volkova\"},{\"id\":\"agents-wed\",\"course\":\"agents\",\"day\":\"wednesday\",\"start\":\"10:00\",\"end\":\"11:30\",\"room\":\"314\",\"teacher\":\"Anna Petrova\"}],\"source\":\"fixture:schedule-v1\",\"timezone\":\"Europe/Moscow\",\"note\":\"Invented teaching data; not an actual course timetable.\"}"
+      }
+    }
+  ]
+}

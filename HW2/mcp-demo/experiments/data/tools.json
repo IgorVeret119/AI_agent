@@ -1,0 +1,872 @@
+[
+  {
+    "name": "schedule_search",
+    "description": "Search the explicit synthetic schedule snapshot by course and weekday.",
+    "input_schema": {
+      "properties": {
+        "schedule_handle": {
+          "description": "Explicit immutable schedule snapshot handle.",
+          "title": "Schedule Handle",
+          "type": "string",
+          "enum": [
+            "schedule-v1"
+          ]
+        },
+        "course": {
+          "default": "all",
+          "description": "Course filter; all selects every course.",
+          "enum": [
+            "all",
+            "agents",
+            "python",
+            "databases"
+          ],
+          "title": "Course",
+          "type": "string"
+        },
+        "day": {
+          "default": "all",
+          "description": "Weekday filter; all selects every day.",
+          "enum": [
+            "all",
+            "monday",
+            "tuesday",
+            "wednesday"
+          ],
+          "title": "Day",
+          "type": "string"
+        },
+        "response_format": {
+          "default": "concise",
+          "description": "Amount of detail in the response.",
+          "enum": [
+            "concise",
+            "detailed"
+          ],
+          "title": "Response Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schedule_handle"
+      ],
+      "title": "schedule_searchArguments",
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Search the explicit synthetic schedule snapshot by course and weekday."
+    },
+    "source": "project:server.py",
+    "near": false,
+    "target": true
+  },
+  {
+    "name": "schedule_get",
+    "description": "Get one schedule entry; obtain entry_id using schedule_search.",
+    "input_schema": {
+      "properties": {
+        "schedule_handle": {
+          "description": "Explicit immutable schedule snapshot handle.",
+          "title": "Schedule Handle",
+          "type": "string",
+          "enum": [
+            "schedule-v1"
+          ]
+        },
+        "entry_id": {
+          "description": "Entry identifier returned by schedule_search.",
+          "maxLength": 64,
+          "minLength": 1,
+          "title": "Entry Id",
+          "type": "string"
+        },
+        "response_format": {
+          "default": "concise",
+          "description": "Amount of detail in the response.",
+          "enum": [
+            "concise",
+            "detailed"
+          ],
+          "title": "Response Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schedule_handle",
+        "entry_id"
+      ],
+      "title": "schedule_getArguments",
+      "type": "object",
+      "additionalProperties": false,
+      "description": "Get one schedule entry; obtain entry_id using schedule_search."
+    },
+    "source": "project:server.py",
+    "near": false,
+    "target": true
+  },
+  {
+    "name": "schedule_day",
+    "description": "List every scheduled class on one supported weekday.",
+    "input_schema": {
+      "properties": {
+        "schedule_handle": {
+          "description": "Explicit immutable schedule snapshot handle.",
+          "title": "Schedule Handle",
+          "type": "string",
+          "enum": [
+            "schedule-v1"
+          ]
+        },
+        "day": {
+          "description": "Weekday to inspect.",
+          "enum": [
+            "monday",
+            "tuesday",
+            "wednesday"
+          ],
+          "title": "Day",
+          "type": "string"
+        },
+        "response_format": {
+          "default": "concise",
+          "description": "Amount of detail in the response.",
+          "enum": [
+            "concise",
+            "detailed"
+          ],
+          "title": "Response Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schedule_handle",
+        "day"
+      ],
+      "title": "schedule_dayArguments",
+      "type": "object",
+      "additionalProperties": false,
+      "description": "List every scheduled class on one supported weekday."
+    },
+    "source": "project:server.py",
+    "near": false,
+    "target": true
+  },
+  {
+    "name": "schedule_room",
+    "description": "List classes in one supported classroom.",
+    "input_schema": {
+      "properties": {
+        "schedule_handle": {
+          "description": "Explicit immutable schedule snapshot handle.",
+          "title": "Schedule Handle",
+          "type": "string",
+          "enum": [
+            "schedule-v1"
+          ]
+        },
+        "room": {
+          "description": "Supported classroom number.",
+          "enum": [
+            "314",
+            "210",
+            "115"
+          ],
+          "title": "Room",
+          "type": "string"
+        },
+        "response_format": {
+          "default": "concise",
+          "description": "Amount of detail in the response.",
+          "enum": [
+            "concise",
+            "detailed"
+          ],
+          "title": "Response Format",
+          "type": "string"
+        }
+      },
+      "required": [
+        "schedule_handle",
+        "room"
+      ],
+      "title": "schedule_roomArguments",
+      "type": "object",
+      "additionalProperties": false,
+      "description": "List classes in one supported classroom."
+    },
+    "source": "project:server.py",
+    "near": false,
+    "target": true
+  },
+  {
+    "name": "exam_get",
+    "description": "Get one examination by examination identifier from the exam timetable.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "git_list",
+    "description": "Retrieve commit changes for the git domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "devices_get",
+    "description": "Retrieve device firmware versions for the devices domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "exam_search",
+    "description": "Search the synthetic examination timetable by course and exam date; returns exams, not ordinary classes.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "weather_inspect",
+    "description": "Retrieve air quality readings for the weather domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "issues_list",
+    "description": "Retrieve issue comments for the issues domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_notifications",
+    "description": "Configure reminders about upcoming classes; changes notification settings.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "files_search",
+    "description": "Retrieve local file names for the files domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "inventory_inspect",
+    "description": "Retrieve shipment records for the inventory domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "room_details",
+    "description": "Read classroom capacity, facilities and building address by room number.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "inventory_list",
+    "description": "Retrieve warehouse locations for the inventory domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "weather_get",
+    "description": "Retrieve weather observations for the weather domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "teacher_schedule_search",
+    "description": "Search a specific teacher's teaching workload by teacher and weekday.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "mail_list",
+    "description": "Retrieve mail folders for the mail domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "devices_search",
+    "description": "Retrieve network device records for the devices domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_delete",
+    "description": "Delete a class entry from the synthetic course timetable.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "finance_inspect",
+    "description": "Retrieve company fundamentals for the finance domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "images_inspect",
+    "description": "Retrieve image copyright metadata for the images domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "room_availability",
+    "description": "Find free classroom time slots; returns availability rather than scheduled classes.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "support_inspect",
+    "description": "Retrieve customer contact profiles for the support domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "issues_search",
+    "description": "Retrieve software issue tickets for the issues domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "teacher_schedule_get",
+    "description": "Get a teacher workload entry by workload identifier.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "mail_inspect",
+    "description": "Retrieve email attachments for the mail domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "analytics_get",
+    "description": "Retrieve traffic metrics for the analytics domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "consultation_get",
+    "description": "Get one teacher consultation appointment by appointment identifier.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "issues_get",
+    "description": "Retrieve issue details for the issues domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "weather_list",
+    "description": "Retrieve precipitation alerts for the weather domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "archive_schedule_get",
+    "description": "Read one archived schedule entry using an archive record identifier.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "support_search",
+    "description": "Retrieve customer support cases for the support domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "finance_list",
+    "description": "Retrieve exchange rates for the finance domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "calendar_search",
+    "description": "Search a student's personal calendar appointments by date and title.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "fitness_inspect",
+    "description": "Retrieve equipment specifications for the fitness domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "music_search",
+    "description": "Retrieve music tracks for the music domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "archive_schedule_room",
+    "description": "List historical classes held in a classroom during a previous semester.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "issues_inspect",
+    "description": "Retrieve issue labels for the issues domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "maps_search",
+    "description": "Retrieve street addresses for the maps domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "archive_schedule_day",
+    "description": "List all historical course classes on a weekday in an archived semester.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "travel_list",
+    "description": "Retrieve flight routes for the travel domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "devices_list",
+    "description": "Retrieve device status readings for the devices domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "course_enroll",
+    "description": "Enroll a student in a course; changes the enrollment roster.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "books_search",
+    "description": "Retrieve library books for the books domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "git_get",
+    "description": "Retrieve repository branches for the git domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_update",
+    "description": "Change the time, weekday or classroom of an existing class entry.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "finance_search",
+    "description": "Retrieve stock quotes for the finance domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "analytics_search",
+    "description": "Retrieve website traffic events for the analytics domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_conflicts",
+    "description": "Detect overlapping classroom bookings and conflicting class times.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "git_search",
+    "description": "Retrieve source code commits for the git domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "weather_search",
+    "description": "Retrieve city weather forecasts for the weather domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "exam_room",
+    "description": "List examinations in a classroom; excludes regular course classes.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "travel_search",
+    "description": "Retrieve hotel listings for the travel domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "fitness_search",
+    "description": "Retrieve exercise routines for the fitness domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "consultation_room",
+    "description": "List office-hour consultation slots in a classroom.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "files_inspect",
+    "description": "Retrieve file metadata for the files domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "analytics_list",
+    "description": "Retrieve conversion funnels for the analytics domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "calendar_get",
+    "description": "Read one personal calendar event using an event identifier.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "files_list",
+    "description": "Retrieve directory listings for the files domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "recipes_search",
+    "description": "Retrieve cooking recipes for the recipes domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_export",
+    "description": "Export the complete course timetable to an ICS calendar file.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "support_list",
+    "description": "Retrieve support case messages for the support domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "fitness_list",
+    "description": "Retrieve workout records for the fitness domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_bus",
+    "description": "Search campus shuttle bus departure times by stop and weekday.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "music_list",
+    "description": "Retrieve artist biographies for the music domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "inventory_get",
+    "description": "Retrieve product stock levels for the inventory domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "exam_day",
+    "description": "List every examination on one weekday in the examination timetable.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "maps_list",
+    "description": "Retrieve geographic coordinates for the maps domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "books_list",
+    "description": "Retrieve author biographies for the books domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "archive_schedule_search",
+    "description": "Search historical course schedule snapshots from previous semesters.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "mail_get",
+    "description": "Retrieve email contents for the mail domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "files_get",
+    "description": "Retrieve file contents for the files domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "consultation_search",
+    "description": "Search teacher office-hour appointments by course and weekday.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "recipes_list",
+    "description": "Retrieve nutrition information for the recipes domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "books_inspect",
+    "description": "Retrieve book reviews for the books domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "schedule_create",
+    "description": "Create a new class in the synthetic course schedule; modifies the timetable.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "fitness_get",
+    "description": "Retrieve exercise descriptions for the fitness domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "images_get",
+    "description": "Retrieve image dimensions for the images domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "consultation_day",
+    "description": "List teacher consultations and office hours on a weekday.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "music_inspect",
+    "description": "Retrieve playlists for the music domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "books_get",
+    "description": "Retrieve book editions for the books domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "calendar_day",
+    "description": "List personal calendar appointments on a date, including non-course events.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "maps_inspect",
+    "description": "Retrieve nearby landmarks for the maps domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "music_get",
+    "description": "Retrieve album metadata for the music domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "course_details",
+    "description": "Read a course syllabus and prerequisites by course identifier; contains no class times.",
+    "source": "synthetic:hand-authored",
+    "near": true,
+    "target": false
+  },
+  {
+    "name": "analytics_inspect",
+    "description": "Retrieve audience segments for the analytics domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "support_get",
+    "description": "Retrieve support case details for the support domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "images_search",
+    "description": "Retrieve image asset names for the images domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "finance_get",
+    "description": "Retrieve historical market prices for the finance domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "images_list",
+    "description": "Retrieve image color palettes for the images domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "maps_get",
+    "description": "Retrieve walking directions for the maps domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "inventory_search",
+    "description": "Retrieve warehouse products for the inventory domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "mail_search",
+    "description": "Retrieve email messages for the mail domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "recipes_inspect",
+    "description": "Retrieve cooking techniques for the recipes domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "travel_get",
+    "description": "Retrieve hotel room types for the travel domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "recipes_get",
+    "description": "Retrieve recipe ingredients for the recipes domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "git_inspect",
+    "description": "Retrieve repository tags for the git domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "travel_inspect",
+    "description": "Retrieve airport information for the travel domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  },
+  {
+    "name": "devices_inspect",
+    "description": "Retrieve device configuration backups for the devices domain.",
+    "source": "synthetic:hand-authored-template",
+    "near": false,
+    "target": false
+  }
+]
